@@ -42,7 +42,7 @@ end
 
 def perform
   depute = get_all_email(get_url_and_name)
-  puts depute
+  # puts depute
 end
 
 perform

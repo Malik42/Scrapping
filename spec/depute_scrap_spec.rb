@@ -14,6 +14,10 @@ end
 
 describe 'get_townhall_email' do
   it "return the email that was taken on the website by the url" do
+<<<<<<< HEAD
     expect(get_all_email.is_a?(Hash)
+=======
+    expect(get_all_email([{"nom" => "Blein", "prenom" => "Yves", "url" => "https://www.nosdeputes.fr/yves-blein"}])).to be_instance_of Array
+>>>>>>> 71f3e91a340816e7731c1985a83f67947fffc6eb
   end
 end
