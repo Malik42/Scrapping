@@ -36,12 +36,8 @@ end
 
 def perform
   crypto = get_array_of_hash(scrap_crypto())
-<<<<<<< HEAD
-  # puts crypto
-  # puts scrap_crypto
-=======
   puts crypto
->>>>>>> 34988ba55c65a4d8c2c782ccc01ac0617dd8db8b
+  # puts scrap_crypto
 end
 
 perform
