@@ -11,17 +11,3 @@ node_text = doc.css("a[href].currency-name-container")
   # puts node_text
   # node_text = doc.css("a.price")
 
-<<<<<<< HEAD
-crypto = {}
-
-doc.xpath('//*[@id="currencies-all"]/tbody').each do |node|
-  crypto = {"crypto" => node.text.split}
-  puts crypto
-end
-
-=======
-  # puts node_text['href'].byteslice(12, 7)
-  node_text.map do |element|
-    puts element["href"].byteslice(12, element["href"].length).tr("/", "")
-  end
->>>>>>> c8561ac92f9619580cc1aece2419ce0655fdbe67
