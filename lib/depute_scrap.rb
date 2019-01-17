@@ -35,15 +35,19 @@ def get_all_email(deputes)
       "-AAAAAAaaaaaaAaAaAaCcCcCcCcCcDdDdDdEEEEeeeeEeEeEeEeEeGgGgGgGgHhHhIIIIiiiiIiIiIiIiIiJjKkkLlLlLlLlLlNnNnNnNnnNnOOOOOOooooooOoOoOoRrRrRrSsSsSsSssTtTtTtUUUUuuuuUuUuUuUuUuUuWwYyyYyYZzZzZz")
     email = get_townhall_email(url)
     email_tab << {"first_name" => depute["nom"], "last_name" => depute["prenom"], "email" => email}
-    break if index == 5 # tester pour 5
+    break if index == 10 # tester pour 5
   end
   email_tab
 end
 
 def perform
   depute = get_all_email(get_url_and_name)
+<<<<<<< HEAD
   # puts depute
   puts get_townhall_email("https://www.nosdeputes.fr/benjamin-dirx")
+=======
+  puts depute
+>>>>>>> 7468e1e02c589492b86231b7146379dbdb75c912
 end
 
 perform
