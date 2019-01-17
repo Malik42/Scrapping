@@ -20,9 +20,6 @@ describe 'scrap_crypto' do
   it "return the email that was taken on the website by the url" do
     expect(scrap_crypto).not_to be_nil
   end
-<<<<<<< HEAD
-end
-=======
 end
 
 # describe 'scrap_crypto' do
@@ -30,4 +27,3 @@ end
 #     expect(scrap_crypto([{"name_tb" => "BTC", "price_tb" => "$3666.26"}])).to be_instance_of Array
 #   end
 # end
->>>>>>> 8bc32ce8617bd6f83cd5752a9b7af34bab5f5d82
