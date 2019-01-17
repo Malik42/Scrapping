@@ -8,7 +8,7 @@ end
 
 describe 'get_townhall_email' do
   it "return the email that was taken on the website by the url" do
-    expect(get_townhall_email).to be_instance_of Array
+    expect('https://www.nosdeputes.fr/damien-abad').not_to be_nil
   end
 end
 
