@@ -15,7 +15,17 @@ def get_url_and_name
     url[0] = ""
     name_and_url << {city => "http://annuaire-des-mairies.com" + url}
   end
-  puts name_and_url
+  name_and_url
 end
 
-get_url_and_name
+def get_townhall_email(townhall_url)
+
+end
+
+def perform
+  villes = get_url_and_name
+  puts villes[0][1]
+
+end
+
+perform
