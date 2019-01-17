@@ -8,16 +8,12 @@ end
 
 describe 'get_townhall_email' do
   it "return the email that was taken on the website by the url" do
-    expect('https://www.nosdeputes.fr/damien-abad').not_to be_nil
+    expect(get_townhall_email('https://www.nosdeputes.fr/damien-abad')).to eq("contact@damien-abad.fr")
   end
 end
 
 describe 'get_townhall_email' do
   it "return the email that was taken on the website by the url" do
-<<<<<<< HEAD
-    expect(get_all_email.is_a?(Hash)
-=======
     expect(get_all_email([{"nom" => "Blein", "prenom" => "Yves", "url" => "https://www.nosdeputes.fr/yves-blein"}])).to be_instance_of Array
->>>>>>> 71f3e91a340816e7731c1985a83f67947fffc6eb
   end
 end
