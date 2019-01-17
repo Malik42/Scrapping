@@ -2,7 +2,7 @@ require_relative '../lib/crypto_scrap'
 
 describe 'merge_tab_in_hash' do
   it "merge tab in hash" do
-    expect(["MRQ","TWIST"], ["$0.000074","$0.000185"]).to include({"TWIST"=>"$0.000185"})
+    expect(merge_tab_in_hash(["MRQ","TWIST"], ["$0.000074","$0.000185"])).to include("TWIST"=>"$0.000185")
   end
 end
 
