@@ -9,7 +9,6 @@ def get_url_and_name
 
   annuaire.map.with_index do |element, i|
     nom_prenom = element.text.tr("\n", "").split(",")
-
     taille = nom_prenom[1].length
     nom_prenom[1][taille - 4..taille] = ''
     nom_prenom[1][0] = ''
