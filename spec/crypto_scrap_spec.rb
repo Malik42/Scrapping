@@ -21,8 +21,4 @@ end
   it "return the email that was taken on the website by the url" do
     expect(scrap_crypto).not_to be_nil
   end
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> 614f3774b7237e5361b476b72f17f817306bdf17
