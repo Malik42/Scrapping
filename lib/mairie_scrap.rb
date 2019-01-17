@@ -14,7 +14,7 @@ def get_url_and_name
     url = element["href"]
     name_and_url << {city => url}
   end
-  pp name_and_url
+  puts name_and_url
 end
 
 get_url_and_name
