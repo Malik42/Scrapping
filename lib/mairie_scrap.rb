@@ -25,7 +25,7 @@ end
 def get_all_email(villes)
   email_tab = []
   villes.map.with_index do |ville, index|
-    # puts ville["url"]
+
     email = get_townhall_email(ville["url"])
     if email == ""
       email_tab << {ville["ville"] => "NO EMAIL"}
