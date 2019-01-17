@@ -20,13 +20,16 @@ def get_url_and_name
 end
 
 def get_townhall_email(townhall_url)
-
+  page_url = townhall_url
+  doc = Nokogiri::HTML(open(page_url))
+  email = doc.xpath("/html/body/div/main/section[2]/div/table/tbody/tr[4]/td[2]").text
 end
+
+
 
 def perform
   villes = get_url_and_name
-  print villes[0]["ville"] + ' '
-  puts villes[0]["url"]
+  get_townhall_email(villes[0]["url"])
 
 end
 
