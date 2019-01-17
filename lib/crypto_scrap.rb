@@ -35,9 +35,9 @@ def scrap_crypto
 end
 
 def perform
-  # crypto = get_array_of_hash(scrap_crypto())
+  crypto = get_array_of_hash(scrap_crypto())
   # puts crypto
-  puts scrap_crypto
+  # puts scrap_crypto
 end
 
 perform
