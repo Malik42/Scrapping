@@ -3,10 +3,16 @@ require 'open-uri'
 
 def merge_tab_in_hash(array_key, array_value)
   hash = {}
-  
   array_key.zip(array_value) { |key, value| hash[key] = value }
-  # tab = [hash]
   hash
+end
+
+def get_array_of_hash(array)
+  crypto = []
+  for i in array
+    crypto << {i[0] => i[1]}
+  end
+  crypto
 end
 
 def scrap_crypto
@@ -25,21 +31,12 @@ def scrap_crypto
     price_tb[i] = element.text
   end
 
-  final_hash = merge_tab_in_hash(name_tb, price_tb)
+  return merge_tab_in_hash(name_tb, price_tb)
 end
 
 def perform
-  crypto = scrap_crypto
-  # puts crypto
-  index = 0
-  final_crypto = []
-  for i in crypto
-    final_crypto << {i[0] => i[1]}
-  end
-  # puts final_crypto
-  tab_crypto = []
-  tab_crypto = [final_crypto]
-  puts tab_crypto
+  crypto = get_array_of_hash(scrap_crypto())
+  puts crypto
 end
 
 perform
