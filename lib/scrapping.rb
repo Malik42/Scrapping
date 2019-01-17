@@ -30,11 +30,23 @@ end
 
 def perform
   crypto = scrap_crypto
+<<<<<<< HEAD
   #puts crypto
 
   for i in crypto
     puts "#{i}"
+=======
+  # puts crypto
+  index = 0
+  final_crypto = []
+  for i in crypto
+    final_crypto << {i[0] => i[1]}
+>>>>>>> 0a92800241ffac988e1715e698ca66d722c8fca6
   end
+  # puts final_crypto
+  tab_crypto = []
+  tab_crypto = [final_crypto]
+  puts tab_crypto
 end
 
 perform
