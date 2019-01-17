@@ -24,7 +24,7 @@ end
 def get_townhall_email(townhall_url)
   page_url = townhall_url
   doc = Nokogiri::HTML(open(page_url))
-  print email = doc.xpath("//a[contains(@href,'mailto')]").first.text
+  email = doc.xpath("//a[contains(@href,'mailto')]").first.text
 end
 
 def get_all_email(deputes)
