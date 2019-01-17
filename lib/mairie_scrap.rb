@@ -13,7 +13,8 @@ def get_url_and_name
     city = element.text
     url = element["href"]
     url[0] = ""
-    name_and_url << {city => "http://annuaire-des-mairies.com" + url}
+    name_and_url << {"ville" => city, "url" => "http://annuaire-des-mairies.com" + url}
+
   end
   name_and_url
 end
