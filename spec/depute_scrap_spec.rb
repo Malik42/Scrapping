@@ -14,6 +14,6 @@ end
 
 describe 'get_townhall_email' do
   it "return the email that was taken on the website by the url" do
-    expect(get_all_email).to be_instance_of Array
+    expect(get_all_email.is_a?(Hash)
   end
 end
