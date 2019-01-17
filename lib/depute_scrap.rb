@@ -14,6 +14,10 @@ def get_url_and_name
     nom_prenom[1][taille - 4..taille] = ''
     nom_prenom[1][0] = ''
     nom_prenom[0][0..5] = ''
+    if nom_prenom[0] == "Mörch"
+      nom_prenom[0] = "moerch"
+    end
+
       # print nom_prenom[1]
       # print "\n"
     # end
@@ -39,6 +43,7 @@ def get_all_email(deputes)
     #   email_tab << {depute["ville"] => "NO EMAIL"}
     # else
     email_tab << {"first_name" => depute["nom"], "last_name" => depute["prenom"], "email" => email}
+    # break if index == 70
     # end
   end
   email_tab
