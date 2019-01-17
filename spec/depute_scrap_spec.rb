@@ -1,15 +1,15 @@
 require_relative '../lib/depute_scrap'
 
 describe 'get_url_and_name' do
-  it "return a table with the name and surname of the members and their email" do
+  it "test if it returns a tables" do
     expect(get_url_and_name).to be_instance_of Array
   end
 
-  it "return a table with the name and surname of the members and their email" do
+  it "test if it returns a hash" do
     expect(get_url_and_name).is_a?(Hash)
   end
 
-  it "return a table with the name and surname of the members and their email" do
+  it "test if it is not nil" do
     expect(get_url_and_name).not_to be_nil
   end
 end

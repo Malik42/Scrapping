@@ -12,6 +12,16 @@ describe 'get_array_of_hash' do
   end
 end
 
+describe 'scrap_crypto' do
+  it "return the email that was taken on the website by the url" do
+    expect(scrap_crypto).is_a?(Hash)
+  end
+
+  it "return the email that was taken on the website by the url" do
+    expect(scrap_crypto).not_to be_nil
+  end
+end
+
 # describe 'scrap_crypto' do
 #   it "return the email that was taken on the website by the url" do
 #     expect(scrap_crypto([{"name_tb" => "BTC", "price_tb" => "$3666.26"}])).to be_instance_of Array
