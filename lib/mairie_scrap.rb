@@ -25,7 +25,8 @@ end
 
 def perform
   villes = get_url_and_name
-  puts villes[0][1]
+  print villes[0]["ville"] + ' '
+  puts villes[0]["url"]
 
 end
 
