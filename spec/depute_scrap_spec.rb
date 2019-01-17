@@ -8,6 +8,12 @@ end
 
 describe 'get_townhall_email' do
   it "return the email that was taken on the website by the url" do
-    expect(get_townhall_email).to eq("contact@damien-abad.fr")
+    expect(get_townhall_email).to be_instance_of Array
+  end
+end
+
+describe 'get_townhall_email' do
+  it "return the email that was taken on the website by the url" do
+    expect(get_all_email).to be_instance_of Array
   end
 end
