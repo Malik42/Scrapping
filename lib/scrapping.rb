@@ -25,14 +25,15 @@ def scrap_crypto
     price_tb[i] = element.text
   end
 
-  final_hash = merge_tab_in_hash(name_tb, price_tb)
+  final_hash = {merge_tab_in_hash(name_tb, price_tb)}
 end
 
 def perform
   crypto = scrap_crypto
-  # puts crypto
-  for i in 0..crypto
-    puts i
+  #puts crypto
+
+  for i in crypto
+    puts "#{i}"
   end
 end
 
