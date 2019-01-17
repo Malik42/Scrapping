@@ -35,7 +35,7 @@ def get_all_email(deputes)
       "-AAAAAAaaaaaaAaAaAaCcCcCcCcCcDdDdDdEEEEeeeeEeEeEeEeEeGgGgGgGgHhHhIIIIiiiiIiIiIiIiIiJjKkkLlLlLlLlLlNnNnNnNnnNnOOOOOOooooooOoOoOoRrRrRrSsSsSsSssTtTtTtUUUUuuuuUuUuUuUuUuUuWwYyyYyYZzZzZz")
     email = get_townhall_email(url)
     email_tab << {"first_name" => depute["nom"], "last_name" => depute["prenom"], "email" => email}
-    break if index == 10 # tester pour 5
+    break if index == 10 # TESTER AVEC CETTE VALEUR SINON DEMAIN ON EST ENCORE LA
   end
   email_tab
 end
