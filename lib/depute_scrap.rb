@@ -9,7 +9,6 @@ def get_url_and_name
 
   annuaire.map.with_index do |element, i|
     nom_prenom = element.text.tr("\n", "").split(",")
-    # if nom_prenom.length > 2
     taille = nom_prenom[1].length
     nom_prenom[1][taille - 4..taille] = ''
     nom_prenom[1][0] = ''
@@ -17,10 +16,6 @@ def get_url_and_name
     if nom_prenom[0] == "Mörch"
       nom_prenom[0] = "moerch"
     end
-
-      # print nom_prenom[1]
-      # print "\n"
-    # end
     name_and_url << {"nom" => nom_prenom[0], "prenom" => nom_prenom[1], "url" => "https://www.nosdeputes.fr/" + nom_prenom[1].downcase.tr(" ", "-") + "-" + nom_prenom[0].downcase.tr(" ", "-")}
   end
   name_and_url
@@ -39,24 +34,14 @@ def get_all_email(deputes)
       "'ÀÁÂÃÄÅàáâãäåĀāĂăĄąÇçĆćĈĉĊċČčÐðĎďĐđÈÉÊËèéêëĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħÌÍÎÏìíîïĨĩĪīĬĭĮįİıĴĵĶķĸĹĺĻļĽľĿŀŁłÑñŃńŅņŇňŉŊŋÒÓÔÕÖØòóôõöøŌōŎŏŐőŔŕŖŗŘřŚśŜŝŞşŠšſŢţŤťŦŧÙÚÛÜùúûüŨũŪūŬŭŮůŰűŲųŴŵÝýÿŶŷŸŹźŻżŽž",
       "-AAAAAAaaaaaaAaAaAaCcCcCcCcCcDdDdDdEEEEeeeeEeEeEeEeEeGgGgGgGgHhHhIIIIiiiiIiIiIiIiIiJjKkkLlLlLlLlLlNnNnNnNnnNnOOOOOOooooooOoOoOoRrRrRrSsSsSsSssTtTtTtUUUUuuuuUuUuUuUuUuUuWwYyyYyYZzZzZz")
     email = get_townhall_email(url)
-    # if email == ""
-    #   email_tab << {depute["ville"] => "NO EMAIL"}
-    # else
     email_tab << {"first_name" => depute["nom"], "last_name" => depute["prenom"], "email" => email}
-    # break if index == 70
-    # end
   end
   email_tab
 end
 
 def perform
-  # puts get_url_and_name
   depute = get_all_email(get_url_and_name)
   puts depute
-  # puts get_townhall_email(depute[0]["url"])
-  # puts depute[0]["url"]
-  # villes = get_all_email(get_url_and_name)
-  # puts villes
 end
 
 perform
