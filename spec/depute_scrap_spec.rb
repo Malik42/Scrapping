@@ -14,6 +14,6 @@ end
 
 describe 'get_townhall_email' do
   it "return the email that was taken on the website by the url" do
-    expect(get_all_email).to be_instance_of Array
+    expect(get_all_email([{"nom" => "Blein", "prenom" => "Yves", "url" => "https://www.nosdeputes.fr/yves-blein"}])).to be_instance_of Array
   end
 end
