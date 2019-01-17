@@ -28,7 +28,7 @@ def get_all_email(deputes)
     # if email == ""
     #   email_tab << {depute["ville"] => "NO EMAIL"}
     # else
-    email_tab << {"first_name" => depute["nom"], "lest_name" => depute["prenom"], "email" => email}
+    email_tab << {"first_name" => depute["nom"], "last_name" => depute["prenom"], "email" => email}
     # end
   end
   email_tab
