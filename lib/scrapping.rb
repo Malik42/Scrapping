@@ -11,3 +11,7 @@ node_text = doc.css("a[href].currency-name-container")
   # puts node_text
   # node_text = doc.css("a.price")
 
+  # puts node_text['href'].byteslice(12, 7)
+  node_text.map do |element|
+    puts element["href"].byteslice(12, element["href"].length).tr("/", "")
+  end
