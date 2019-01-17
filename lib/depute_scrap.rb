@@ -43,6 +43,7 @@ end
 def perform
   depute = get_all_email(get_url_and_name)
   # puts depute
+  puts get_townhall_email("https://www.nosdeputes.fr/benjamin-dirx")
 end
 
 perform

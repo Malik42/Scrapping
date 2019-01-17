@@ -8,7 +8,7 @@ end
 
 describe 'get_townhall_email' do
   it "return the email that was taken on the website by the url" do
-    expect('https://www.nosdeputes.fr/damien-abad').not_to be_nil
+    expect(get_townhall_email("https://www.nosdeputes.fr/benjamin-dirx")).to eq("benjamin.dirx@assemblee-nationale.fr")
   end
 end
 
